@@ -8,6 +8,7 @@ export default function (parentClass) {
       const properties = this._getInitProperties();
       if (properties) {
       }
+      this.lastSnapshot = "";
     }
 
     _trigger(method) {
@@ -59,6 +60,28 @@ export default function (parentClass) {
 
     _loadFromJson(o) {
       // load state for savegames
+    }
+
+    async SnapshotObj() {
+      const storage = this.runtime.storage;
+      const keys = await storage.keys();
+      const data = {};
+      await Promise.all(
+        keys.map((key) =>
+          storage.getItem(key).then((value) => {
+            data[key] = value;
+          })
+        )
+      );
+      return data;
+    }
+
+    async LoadFromSnapshotObj(data) {
+      const storage = this.runtime.storage;
+      await storage.clear();
+      await Promise.all(
+        Object.keys(data).map((key) => storage.setItem(key, data[key]))
+      );
     }
   };
 }

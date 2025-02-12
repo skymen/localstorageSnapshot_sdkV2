@@ -7,15 +7,17 @@ import {
 import _version from "./version.js";
 export const addonType = ADDON_TYPE.PLUGIN;
 export const type = PLUGIN_TYPE.OBJECT;
-export const id = "sample_addon";
-export const name = "Sample Addon";
+export const id = "skymen_localstoragesnapshot";
+export const name = "Local Storage Snapshot";
 export const version = _version;
 export const minConstructVersion = undefined;
 export const author = "skymen";
-export const website = "https://www.construct.net";
-export const documentation = "https://www.construct.net";
-export const description = "Description";
-export const category = ADDON_CATEGORY.GENERAL;
+export const website = "https://github.com/skymen/localstorageSnapshot_sdkV2";
+export const documentation =
+  "https://www.construct.net/en/make-games/addons/1210/localstorage-snapshot";
+export const description =
+  "Allows you to save and load snapshots of local storage.";
+export const category = ADDON_CATEGORY.DATA_AND_STORAGE;
 
 export const hasDomside = false;
 export const files = {

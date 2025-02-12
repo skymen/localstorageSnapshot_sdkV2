@@ -1,14 +1,16 @@
-<img src="./src/icon.svg?rand=8697" width="100" /><br>
-# Sample Addon
-<i>Description</i> <br>
-### Version 1.0.0.0
+<img src="./examples/cover.webp" width="150" /><br>
+# Local Storage Snapshot
+<i>Allows you to save and load snapshots of local storage.</i> <br>
+### Version 2.0.0.0
 
-[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/ConstructFund/construct-addon-wizard-scaffold/releases/download/sample_addon-1.0.0.0.c3addon/sample_addon-1.0.0.0.c3addon)
+[<img src="https://placehold.co/200x50/4493f8/FFF?text=Download&font=montserrat" width="200"/>](https://github.com/skymen/localstorageSnapshot_sdkV2/releases/download/skymen_localstoragesnapshot-2.0.0.0.c3addon/skymen_localstoragesnapshot-2.0.0.0.c3addon)
 <br>
-<sub> [See all releases](https://github.com/ConstructFund/construct-addon-wizard-scaffold/releases) </sub> <br>
+<sub> [See all releases](https://github.com/skymen/localstorageSnapshot_sdkV2/releases) </sub> <br>
 
 ---
 <b><u>Author:</u></b> skymen <br>
+<b>[Construct Addon Page](https://www.construct.net/en/make-games/addons/1210/localstorage-snapshot)</b>  <br>
+<b>[Documentation](https://www.construct.net/en/make-games/addons/1210/localstorage-snapshot)</b>  <br>
 <sub>Made using [CAW](https://marketplace.visualstudio.com/items?itemName=skymen.caw) </sub><br>
 
 ## Table of Contents
@@ -35,6 +37,8 @@ npm run dev
 ```
 
 ## Examples Files
+| Description | Download |
+| --- | --- |
 
 ---
 ## Properties
@@ -46,26 +50,22 @@ npm run dev
 ## Actions
 | Action | Description | Params
 | --- | --- | --- |
-| Sample Action | This is a sample action | Param1             *(string)* <br> |
-| Sample Action Async | This is a sample action |  |
-| Sample Action Combo | This is a sample action | Param1             *(combo)* <br> |
-| Sample Action | This is a sample action | Param1             *(string)* <br> |
+| Load from snapshot | Load from a snapshot | Snapshot             *(string)* <br> |
+| Load snapshot from file | Load the snapshot from a file | Path mode             *(combo)* <br>Filename             *(string)* <br> |
+| Save snapshot to file | Save the snapshot to a file | Path mode             *(combo)* <br>Filename             *(string)* <br> |
+| Snapshot | Snapshot the entire localstorage |  |
 
 
 ---
 ## Conditions
 | Condition | Description | Params
 | --- | --- | --- |
-| Sample Condition | This is a sample condition | Param1 *(string)* <br> |
-| Sample Trigger | This is a sample trigger |  |
-| Sample Condition | This is a sample condition | Param1 *(combo)* <br> |
-| Sample Condition | This is a sample condition |  |
+| On Loaded | Triggered when a snapshot is loaded |  |
+| On Snapshot | Triggered when a snapshot is taken |  |
 
 
 ---
 ## Expressions
 | Expression | Description | Return Type | Params
 | --- | --- | --- | --- |
-| Expression | Sample Expression | number |  | 
-| Expression2 | Sample Expression | string |  | 
-| SampleExpression | This is a sample expression | string |  | 
+| LastSnapshot | Last snapshot taken | string |  | 

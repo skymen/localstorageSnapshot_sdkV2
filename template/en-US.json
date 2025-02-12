@@ -1,117 +1,91 @@
 {
   "languageTag": "en-US",
-  "fileDescription": "Strings for sample_addon.",
+  "fileDescription": "Strings for skymen_localstoragesnapshot.",
   "text": {
     "plugins": {
-      "sample_addon": {
-        "name": "Sample Addon",
-        "description": "Description",
-        "help-url": "https://www.construct.net",
+      "skymen_localstoragesnapshot": {
+        "name": "Local Storage Snapshot",
+        "description": "Allows you to save and load snapshots of local storage.",
+        "help-url": "https://www.construct.net/en/make-games/addons/1210/localstorage-snapshot",
         "aceCategories": {
-          "Aces_Files_In_Category_Folder": "Aces_Files_In_Category_Folder",
-          "Ace_Folders_In_Category_Folder": "Ace_Folders_In_Category_Folder",
-          "Aces_In_Single_File": "Aces_In_Single_File"
+          "general": "general"
         },
         "properties": {},
         "actions": {
-          "Action": {
-            "list-name": "Sample Action",
-            "display-text": "Sample Action {0}",
-            "description": "This is a sample action",
+          "LoadFromSnapshot": {
+            "list-name": "Load from snapshot",
+            "display-text": "Load from snapshot {0}",
+            "description": "Load from a snapshot",
             "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param"
+              "snapshot": {
+                "name": "Snapshot",
+                "desc": "The snapshot to load from"
               }
             }
           },
-          "AsyncAction": {
-            "list-name": "Sample Action Async",
-            "display-text": "Sample Action Async",
-            "description": "This is a sample action",
-            "params": {}
-          },
-          "ActionCombo": {
-            "list-name": "Sample Action Combo",
-            "display-text": "Sample Action Combo {0}",
-            "description": "This is a sample action",
+          "LoadSnapshotFromFile": {
+            "list-name": "Load snapshot from file",
+            "display-text": "Load snapshot from {0} {1}",
+            "description": "Load the snapshot from a file",
             "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param",
+              "pathMode": {
+                "name": "Path mode",
+                "desc": "The path mode to use",
                 "items": {
-                  "test": "test",
-                  "test2": "test2"
+                  "appdata": "AppData",
+                  "absolute": "Absolute path"
                 }
+              },
+              "filename": {
+                "name": "Filename",
+                "desc": "The filename to save the snapshot to"
               }
             }
           },
-          "SampleAction": {
-            "list-name": "Sample Action",
-            "display-text": "Sample Action {0}",
-            "description": "This is a sample action",
+          "SaveSnapshotToFile": {
+            "list-name": "Save snapshot to file",
+            "display-text": "Save snapshot to {0} {1}",
+            "description": "Save the snapshot to a file",
             "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param"
+              "pathMode": {
+                "name": "Path mode",
+                "desc": "The path mode to use",
+                "items": {
+                  "appdata": "AppData",
+                  "absolute": "Absolute path"
+                }
+              },
+              "filename": {
+                "name": "Filename",
+                "desc": "The filename to save the snapshot to"
               }
             }
+          },
+          "Snapshot": {
+            "list-name": "Snapshot",
+            "display-text": "Snapshot localstorage",
+            "description": "Snapshot the entire localstorage",
+            "params": {}
           }
         },
         "conditions": {
-          "Condition": {
-            "list-name": "Sample Condition",
-            "display-text": "Sample Condition {0}",
-            "description": "This is a sample condition",
-            "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param"
-              }
-            }
-          },
-          "Trigger": {
-            "list-name": "Sample Trigger",
-            "display-text": "Sample Trigger",
-            "description": "This is a sample trigger",
+          "OnLoaded": {
+            "list-name": "On Loaded",
+            "display-text": "On Loaded",
+            "description": "Triggered when a snapshot is loaded",
             "params": {}
           },
-          "ConditionCombo": {
-            "list-name": "Sample Condition",
-            "display-text": "Sample Condition {0}",
-            "description": "This is a sample condition",
-            "params": {
-              "param1": {
-                "name": "Param1",
-                "desc": "This is a sample param",
-                "items": {
-                  "TRUE": "True",
-                  "FALSE": "False"
-                }
-              }
-            }
-          },
-          "SampleCondition": {
-            "list-name": "Sample Condition",
-            "display-text": "Sample Condition",
-            "description": "This is a sample condition",
+          "OnSnapshot": {
+            "list-name": "On Snapshot",
+            "display-text": "On Snapshot",
+            "description": "Triggered when a snapshot is taken",
             "params": {}
           }
         },
         "expressions": {
-          "Expression": {
-            "translated-name": "Expression",
-            "description": "Sample Expression",
-            "params": {}
-          },
-          "Expression2": {
-            "translated-name": "Expression2",
-            "description": "Sample Expression",
-            "params": {}
-          },
-          "SampleExpression": {
-            "translated-name": "SampleExpression",
-            "description": "This is a sample expression",
+          "LastSnapshot": {
+            "translated-name": "LastSnapshot",
+            "description": "Last snapshot taken",
             "params": {}
           }
         }
